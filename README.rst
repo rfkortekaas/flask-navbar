@@ -80,14 +80,14 @@ index.html:
 
 You can find a small, runnable example application inside the example folder. To run it,  execute:
 
-.. code-block:: bash
+.. code-block::
+
+    # use `set FLASK_APP=example` on Windows
     export FLASK_APP=example
     flask run
 
-use `set` in instead of `export` on Windows
-
 Snapshot:
 
-image:: docs/snapshot.png
+.. |snapshot| image:: docs/snapshot.png
 
 The `Flask-Nav full documentation <http://pythonhosted.org/flask-nav/>`_ can be found on PyPI.
