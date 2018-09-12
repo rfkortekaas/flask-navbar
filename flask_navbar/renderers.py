@@ -49,12 +49,19 @@ class SimpleRenderer(Renderer):
         kwargs.update(self.kwargs)
 
         cont = tags.nav(**kwargs)
-        ul = cont.add(tags.ul())
+
+        bar = cont.add(tags.div())
 
         for item in node.items:
-            ul.add(tags.li(self.visit(item)))
+            bar.add(self.visit(item))
 
         return cont
+
+    def visit_NavUl(self, node):
+        ul = tags.ul()
+        for item in node.items:
+            ul.add(self.visit(item))
+        return ul
 
     def visit_View(self, node):
         kwargs = {}
@@ -87,7 +94,7 @@ class SimpleRenderer(Renderer):
         return raw(node.content)
 
 
-class BootstrapExtRenderer(Renderer):
+class ExtBootstrapRenderer(Renderer):
     def __init__(self, html5=True, id=None):
         self.html5 = html5
         self._in_dropdown = False
@@ -148,7 +155,7 @@ class BootstrapExtRenderer(Renderer):
 
         return root
 
-    def visit_Nav(self, node):
+    def visit_NavUl(self, node):
         ul = tags.ul()
         ul['class'] = 'nav navbar-nav navbar-right' if node.navbar_right else 'nav navbar-nav'
         for item in node.items:

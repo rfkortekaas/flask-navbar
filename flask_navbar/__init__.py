@@ -81,7 +81,7 @@ class ElementRegistry(collections.MutableMapping):
 
 
 class Nav(object):
-    """The Flask-Nav extension.
+    """The Flask-NavBar extension.
 
     :param app: An optional :class:`~flask.Flask` app to initialize.
     """
@@ -89,9 +89,10 @@ class Nav(object):
     def __init__(self, app=None):
         self.elems = ElementRegistry()
 
-        # per default, register the simple renderer
+        # per default, register the simple and ext_bootstrap renderer
         simple = __name__ + '.renderers', 'SimpleRenderer'
-        self._renderers = [('simple', simple), (None, simple, False), ]
+        ext_bootstrap = __name__ + '.renderers', 'ExtBootstrapRenderer'
+        self._renderers = [('simple', simple), ('ext_bootstrap', ext_bootstrap), (None, ext_bootstrap, True), ]
 
         if app:
             self.init_app(app)

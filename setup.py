@@ -10,13 +10,13 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-setup(name='flask-nav',
-      version='0.6.dev1',
-      description='Easily create navigation for Flask applications.',
+setup(name='flask-navbar',
+      version='0.0.1',
+      description='Easily create navigation for Flask applications. An extended copy of Flask_nav 0.6',
       long_description=read('README.rst'),
-      author='Marc Brinkmann',
-      author_email='git@marcbrinkmann.de',
-      url='http://github.com/mbr/flask-nav',
+      author='zcyuefan',
+      author_email='zcyuefan@126.com',
+      url='http://github.com/zcyuefan/flask-navbar',
       license='MIT',
       packages=find_packages(exclude=['tests', 'example']),
       install_requires=['flask', 'visitor', 'dominate'],
