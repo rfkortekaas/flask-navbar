@@ -90,6 +90,6 @@ Snapshot:
 
 |image|
 
-.. |image| image:: docs/snapshot.png
+.. |image| image:: snapshot.png
 
 The `Flask-Nav full documentation <http://pythonhosted.org/flask-nav/>`_ can be found on PyPI.
