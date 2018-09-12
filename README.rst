@@ -17,7 +17,7 @@ Flask-NavBar extends features below:
     5. support right-side navbar;
     6. support navbar search form.
 
-app.py
+app.py:
 
 .. code-block:: python
 
@@ -57,7 +57,7 @@ app.py
     nav.init_app(app)
 
 
-index.html
+index.html:
 
 .. code-block:: html
 
@@ -78,5 +78,16 @@ index.html
     </body>
     </html>
 
+You can find a small, runnable example application inside the example folder. To run it,  execute:
+
+.. code-block:: bash
+    export FLASK_APP=example
+    flask run
+
+use `set` in instead of `export` on Windows
+
+Snapshot:
+
+image:: docs/snapshot.png
 
 The `Flask-Nav full documentation <http://pythonhosted.org/flask-nav/>`_ can be found on PyPI.
