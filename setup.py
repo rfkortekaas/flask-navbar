@@ -11,7 +11,7 @@ def read(fname):
 
 
 setup(name='flask-navbar',
-      version='0.0.1',
+      version='1.0',
       description='Easily create navigation for Flask applications. An extended copy of Flask_nav 0.6',
       long_description=read('README.rst'),
       author='zcyuefan',
